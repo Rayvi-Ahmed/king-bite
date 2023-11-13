@@ -1,9 +1,14 @@
+import Mathes from "../../Matches/Mathes";
+import Banner from "./Banner/Banner";
 
 
 const Home = () => {
     return (
         <div>
-            <h1>Aita amr bari re bhai , Permanant bari</h1>
+            <Banner></Banner>
+            <Mathes></Mathes>
+
+
         </div>
     );
 };

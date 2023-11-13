@@ -11,7 +11,6 @@ const SignUp = () => {
         reset()
     }
 
-
     return (
         <div className="hero min-h-screen bg-blue-200">
             <div className="hero-content flex-col lg:flex-row-reverse lg:ml-7">

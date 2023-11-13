@@ -10,6 +10,11 @@ import Contact from "../../Pages/Contact/Contact";
 import Impront from "../../Pages/Imprint/Impront";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
+import MatchDetails from "../../Matches/MatchDetails";
+import AllMatch from "../../AllMatch/AllMatch";
+import Post from "../../POST/Post";
+import PostDetails from "../../PostData/Postdetais/PostDetails";
+import AddPlayer from "../../AddPlayer/AddPlayer";
 
 const router = createBrowserRouter([
     {
@@ -49,7 +54,34 @@ const router = createBrowserRouter([
                 path: '/signUp',
                 element: <SignUp></SignUp>
 
+            },
+            {
+                path: "/matchDetails/:id",
+                element:
+                    <MatchDetails></MatchDetails>
+
+            },
+            {
+                path: 'allMatch/:id',
+                element: <AllMatch></AllMatch>,
+
+
+            },
+            {
+                path: 'post',
+                element: <Post></Post>,
+                loader: () => fetch('https://jsonplaceholder.typicode.com/posts')
+            },
+            {
+                path: 'postDetails/:id',
+                element: <PostDetails></PostDetails>,
+                loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+            },
+            {
+                path: 'addPlayer',
+                element: <AddPlayer></AddPlayer>
             }
+
 
 
         ]
